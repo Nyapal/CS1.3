@@ -23,6 +23,7 @@ def decode(digits, base):
     # ...
     # TODO: Decode digits from any base (2 up to 36)
     # ...
+    # testing
 
 
 def encode(number, base):
