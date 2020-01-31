@@ -25,7 +25,7 @@ def decode(digits, base):
 
     for digit in reversed_digits:
         if digit.isalpha():
-            for key, value in hex_dict.items():    # 
+            for key, value in hex_dict.items(): 
                     if value == digit:
                         digit = key
 
@@ -46,20 +46,21 @@ def encode(number, base):
     # Handle unsigned numbers only for now
     assert number >= 0, 'number is negative: {}'.format(number)
     
-    output_list = []
-    remainder = 0
-    
-    while number > 0:
-        remainder = number % base 
+    encode_dict = string.digits + string.ascii_lowercase
+    #list to hold converted characters
+    output = []
 
-        if remainder > 9:
-            remainder = hex_dict[str(remainder)]
-        output_list.insert(0, str(remainder))
-
-        quotient = math.floor(number / base)
+    while number != 0:
+        remainder = number % base
+        quotient = number//base
         number = quotient
         
-    return ''.join(output_list)
+        #new hex digit
+        hex_digit = encode_dict[remainder]
+        #insert hex digit into output list
+        output.insert(0, str(hex_digit))
+
+    return ''.join(output)
 
 
 def convert(digits, base1, base2):
