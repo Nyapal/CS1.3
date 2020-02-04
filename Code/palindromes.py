@@ -26,12 +26,12 @@ def clean (text):
 
 def is_palindrome_iterative(text):
     # implement the is_palindrome function iteratively here
-    if text = '':
+    if text == '':
         return True 
     elif text:
         text = clean(text)
-    else:
-        raise Exception('Empty String')
+    # else:
+    #     raise Exception('Empty String')
 
     first = 0
     last = len(text)-1
