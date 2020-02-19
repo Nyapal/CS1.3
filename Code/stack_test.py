@@ -3,7 +3,6 @@
 from stack import Stack
 import unittest
 
-
 class StackTest(unittest.TestCase):
 
     def test_init(self):
