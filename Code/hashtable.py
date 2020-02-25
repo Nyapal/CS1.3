@@ -116,10 +116,10 @@ class HashTable(object):
             self.size -= 1
         # Insert the new key-value entry into the bucket in either case
         bucket.append((key, value))
+        self.size += 1
         # Check if the load factor exceeds a threshold such as 0.75
-        if #loadfact >= .75:
         # If so, automatically resize to reduce the load factor
-        double the number 
+         
 
     def delete(self, key):
         """Delete the given key and its associated value, or raise KeyError.
@@ -149,8 +149,8 @@ class HashTable(object):
         # Option to reduce size if buckets are sparsely filled (low load factor)
         elif new_size is 0:
             new_size = len(self.buckets) / 2  # Half size
-        # TODO: Get a list to temporarily hold all current key-value entries
-        # ...
+        # Get a list to temporarily hold all current key-value entries
+        temp = []
         # TODO: Create a new list of new_size total empty linked list buckets
         # ...
         # TODO: Insert each key-value entry into the new list of buckets,
