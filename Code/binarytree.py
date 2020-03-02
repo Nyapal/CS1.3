@@ -295,14 +295,14 @@ class BinarySearchTree(object):
     def _traverse_post_order_recursive(self, node, visit):
         """Traverse this binary tree with recursive post-order traversal (DFS).
         Start at the given node and visit each node with the given function.
-        TODO: Running time: ??? Why and under what conditions?
-        TODO: Memory usage: ??? Why and under what conditions?"""
+        Running time: ??? Why and under what conditions?
+        Memory usage: ??? Why and under what conditions?"""
         pass
-        # TODO: Traverse left subtree, if it exists
+        # Traverse left subtree, if it exists
         #...
-        # TODO: Traverse right subtree, if it exists
+        # Traverse right subtree, if it exists
         #...
-        # TODO: Visit this node's data with given function
+        # Visit this node's data with given function
         #...
 
     def _traverse_post_order_iterative(self, node, visit):
