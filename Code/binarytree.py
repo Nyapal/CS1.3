@@ -142,8 +142,8 @@ class BinarySearchTree(object):
         """Return the node containing the given item in this binary search tree,
         or None if the given item is not found. Search is performed recursively
         starting from the given node (give the root node to start recursion).
-        Best case running time: 
-        Worst case running time: """
+        Best case running time: O(1)
+        Worst case running time: O(log n) """
         # Check if starting node exists
         if node is None:
             # Not found (base case)
@@ -166,8 +166,8 @@ class BinarySearchTree(object):
         (or the parent node of where the given item would be if inserted)
         in this tree, or None if this tree is empty or has only a root node.
         Search is performed iteratively starting from the root node.
-        Best case running time: 
-        Worst case running time: """
+        Best case running time: O(1)
+        Worst case running time: O(log n)"""
         # Start with the root node and keep track of its parent
         node = self.root
         parent = None
@@ -215,9 +215,7 @@ class BinarySearchTree(object):
             return self._find_parent_node_recursive(item, node.right, node) # Hint: Remember to update the parent parameter
 
     def delete(self, item):
-        """Remove given item from this tree, if present, or raise ValueError.
-        Best case running time: ??? under what conditions?
-        Worst case running time: ??? under what conditions?"""
+        """Remove given item from this tree, if present, or raise ValueError."""
         # Use helper methods and break this algorithm down into 3 cases
         # based on how many children the node containing the given item has and
         # implement new helper methods for subtasks of the more complex cases
@@ -235,8 +233,8 @@ class BinarySearchTree(object):
     def _traverse_in_order_recursive(self, node, visit):
         """Traverse this binary tree with recursive in-order traversal (DFS).
         Start at the given node and visit each node with the given function.
-        Running time: ??? Why and under what conditions?
-        Memory usage: ??? Why and under what conditions?"""
+        Running time: O(n)
+        Memory usage: O(log n)"""
         if node is not None:
         # Traverse left subtree, if it exists
             self._traverse_in_order_recursive(node.left, visit)
@@ -248,8 +246,8 @@ class BinarySearchTree(object):
     def _traverse_in_order_iterative(self, node, visit):
         """Traverse this binary tree with iterative in-order traversal (DFS).
         Start at the given node and visit each node with the given function.
-        Running time: ??? Why and under what conditions?
-        Memory usage: ??? Why and under what conditions?"""
+        Running time: 
+        Memory usage: """
         # Traverse in-order without using recursion (stretch challenge)
         pass
 
@@ -265,8 +263,8 @@ class BinarySearchTree(object):
     def _traverse_pre_order_recursive(self, node, visit):
         """Traverse this binary tree with recursive pre-order traversal (DFS).
         Start at the given node and visit each node with the given function.
-        Running time: ??? Why and under what conditions?
-        Memory usage: ??? Why and under what conditions?"""
+        Running time: O(n)
+        Memory usage: O(log n)"""
         if node is not None:
         # Visit this node's data with given function
             visit(node.data)
@@ -279,8 +277,8 @@ class BinarySearchTree(object):
     def _traverse_pre_order_iterative(self, node, visit):
         """Traverse this binary tree with iterative pre-order traversal (DFS).
         Start at the given node and visit each node with the given function.
-        Running time: ??? Why and under what conditions?
-        Memory usage: ??? Why and under what conditions?"""
+        Running time: 
+        Memory usage: """
         # Traverse pre-order without using recursion (stretch challenge)
         pass
 
@@ -296,8 +294,8 @@ class BinarySearchTree(object):
     def _traverse_post_order_recursive(self, node, visit):
         """Traverse this binary tree with recursive post-order traversal (DFS).
         Start at the given node and visit each node with the given function.
-        Running time: ??? Why and under what conditions?
-        Memory usage: ??? Why and under what conditions?"""
+        Running time: O(n)
+        Memory usage: O(log n)"""
         # Traverse left subtree, if it exists
         if node.left is not None:
             self._traverse_post_order_recursive(node.left, visit)
@@ -310,8 +308,8 @@ class BinarySearchTree(object):
     def _traverse_post_order_iterative(self, node, visit):
         """Traverse this binary tree with iterative post-order traversal (DFS).
         Start at the given node and visit each node with the given function.
-        Running time: ??? Why and under what conditions?
-        Memory usage: ??? Why and under what conditions?"""
+        Running time: 
+        Memory usage: """
         # Traverse post-order without using recursion (stretch challenge)
         pass
 
@@ -327,8 +325,8 @@ class BinarySearchTree(object):
     def _traverse_level_order_iterative(self, start_node, visit):
         """Traverse this binary tree with iterative level-order traversal (BFS).
         Start at the given node and visit each node with the given function.
-        Running time: ??? Why and under what conditions?
-        Memory usage: ??? Why and under what conditions?"""
+        Running time: O(n)
+        Memory usage: O(n) n is width of queue"""
         # Create queue to store nodes not yet traversed in level-order
         queue = Queue()
         # Enqueue given starting node
