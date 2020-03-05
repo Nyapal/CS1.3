@@ -50,12 +50,11 @@ class Set():
 
   '''difference(other_set) - return a new set that is the difference of this set and other_set'''
   def difference(self, other_set):
-    pass
-    # new_set = Set()
-    # for element in self:
-    #   if not other_set.contains(element):
-    #     new_set.add(element)
-    # return new_set
+    new_set = Set()
+    for element in self:
+      if not other_set.contains(element):
+        new_set.add(element)
+    return new_set
 
   '''is_subset(other_set) - return a boolean indicating whether other_set is a subset of this set'''
   def is_subset(self, other_set):
